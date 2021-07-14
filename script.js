@@ -1,4 +1,5 @@
 const gameContainer = document.getElementById("game");
+const startButton = document.querySelector('button')
 
 const COLORS = [
   "red",
@@ -128,5 +129,12 @@ function incorrectFlip() {
   clickedCards.pop()
 }
 
-// when the DOM loads
-createDivsForColors(shuffledColors);
+// listen for button click to set up game board
+startButton.addEventListener('click', () => {
+
+  startButton.remove();
+
+  gameContainer.className = 'in-progress'
+
+  createDivsForColors(shuffledColors)
+})

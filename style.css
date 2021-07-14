@@ -1,10 +1,10 @@
 body {
   background-color: #455A64;
+  box-sizing: border-box;
 }
 
 h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3rem;
+  font: 3rem 'Montserrat', sans-serif;
   color: #FFFFFF;
   text-align: center;
   letter-spacing: 2px;
@@ -12,13 +12,29 @@ h1 {
   margin-bottom: 8rem;
 }
 
-#game {
+button {
+  font: 1.5rem 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+  width: 8vw;
+  height: 5vh;
+  background-color: #FFC107;
+  color: #455A64;
+  border: none;
+}
+
+.start-condition {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.in-progress {
   width: 65%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  column-gap: 5%;
-  row-gap: 10%;
+  column-gap: 4vw;
+  row-gap: 5vh;
 }
 
 #game div {
