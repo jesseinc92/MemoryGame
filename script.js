@@ -47,7 +47,25 @@ function createDivsForColors(colorArray) {
     const newDiv = document.createElement("div");
 
     // give it a class attribute for the value we are looping over
-    newDiv.classList.add(color);
+    newDiv.id = color;
+
+    switch (color) {
+      case 'red':
+        newDiv.classList.add('#ef5350');
+        break;
+      case 'blue':
+        newDiv.classList.add('#42a5f5');
+        break;
+      case 'green':
+        newDiv.classList.add('#66bb6a');
+        break;
+      case 'orange':
+        newDiv.classList.add('#ffa726');
+        break;
+      case 'purple':
+        newDiv.classList.add('#7e57c2');
+        break;
+    }
 
     // call a function handleCardClick when a div is clicked on
     newDiv.addEventListener("click", handleCardClick);
@@ -102,7 +120,7 @@ function handleCardClick(event) {
 function incorrectFlip() {
 
   for (let clickedCard of clickedCards) {
-    clickedCard.style.backgroundColor = 'white'
+    clickedCard.style.backgroundColor = '#FFFFFF'
   }
 
   numberOfClicks = 0
